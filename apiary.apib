@@ -16,12 +16,11 @@ form of choices.
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
+            "listaCorsi": [
+                1,
+                2,
+                3,
+                4
             ]
         }
 
@@ -34,58 +33,36 @@ form of choices.
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "listaCorsi": [
+                              {
+                                "id": 1,
+                                "title": "Corso specializzato polmoni",
+                                "description": "AAA",
+                                "date": "15/09/2018",
+                                "hour": "10/16",
+                                "ecm": "ECM Toscana",
+                                "city": "Arezzo",
+                                "cost": "10"
+                              },
+                              {
+                                "id": 2,
+                                "title": "Corso specializzato cuore",
+                                "description": "BBB",
+                                "date": "13/10/2018",
+                                "hour": "9/15",
+                                "ecm": "ECM Toscana",
+                                "city": "Firenze",
+                                "cost": "12"
+                              },
+                              {
+                                "id": 3,
+                                "title": "Corso specializzato mani",
+                                "description": "CCC",
+                                "date": "03/11/2018",
+                                "hour": "12/17",
+                                "ecm": "ECM Toscana",
+                                "city": "Pisa",
+                                "cost": "15"
+                              }
+                            ]
             }
-
-## Question [/questions/{question_id}]
-
-+ Parameters
-    + question_id (number) - ID of the Question in the form of an integer
-    
-### View a Questions Detail [GET]
-
-+ Response 200 (application/xml)
-
-        <tag>
-            <question>Favourite programming language?</question>
-            <published_at>2014-11-11T08:40:51.620Z</published_at>
-            <url>/questions/1</url>
-            <choices>
-                <item>
-                    "choice": "Swift",
-                    "url": "/questions/1/choices/1",
-                    "votes": 2048
-                </item>
-                <item>
-                    <choice>Python</choice>
-                    <url>/questions/1/choices/2"</url>
-                    <votes>1024</votes>
-                </item>
-                <item>
-                    <choice>Objective-C</choice>
-                    <url>/questions/1/choices/3"</url>
-                    <votes>512</votes>
-                </item>
-                <item>
-                    <choice>Ruby</choice>
-                    <url>/questions/1/choices/4"</url>
-                    <votes>256</votes>
-                </item>
-            </choices>
-        </tag>
