@@ -122,24 +122,27 @@ Puoi utilizzare questa richiesta per ottenere i dati del profilo utente!
     + Body
 
             {
+                "titoloProfilo":"Profilo Utente"
                 "nome":"Mario",
                 "cognome":"Rossi",
                 "email":"mariorossi@email.it",
                 "professione":"medico",
-                "codicefiscale/p.iva":"CODICEFISCALEQWERTY",
+                "codicefiscale_piva":"CODICEFISCALEQWERTY",
                 "indirizzo":"Viale Glorioso, 45 - 00153 Roma",
+                "titoloWallet":"Wallet"
                 "gettonidisponibili":20,
+                
 
                               
             }
             
 
 
-## Questions Collection [/confermaacquisto]
+## Questions Collection [/acquistoGettoni]
 
-### Question dettaglio corsi [POST]
+### Question acquisto gettoni [POST]
 
-Puoi utilizzare questa richiesta per confermare l'acquisto dei gettoni
+Puoi utilizzare questa richiesta per iniziare l'acquisto dei gettoni
 
 + Request (application/json)
 
@@ -151,16 +154,271 @@ Puoi utilizzare questa richiesta per confermare l'acquisto dei gettoni
 
     + Headers
 
-            Location: /confermaacquisto
+            Location: /acquistoGettoni
 
     + Body
 
             {
-                "stringa1":"Conferma di acquisto di X gettoni",
-                "stringa2":"Gentile X Y, ha acquistato correttamente i suoi gettoni virtuali."
-                "stringa3":"Totale ordine: "
-                "stringa4":"Numero ordine: "
-                "stringa5":"Nuovo saldo gettoni: "
-                "stringa6":"Riceverai i dettagli dell'ordine e la fattura direttamente via email, all'indirizzo: "
+                "titoloConferma":"Conferma di acquisto di $ gettoni",
+                "sottotitolo":"Gentile X Y, ha acquistato correttamente i suoi gettoni virtuali."
+                "totaleOrdine":"Totale ordine: "
+                "numeroOrdine":"Numero ordine: "
+                "nuovoSaldoGettoni":"Nuovo saldo gettoni: "
+                "descrizione":"Riceverai i dettagli dell'ordine e la fattura direttamente via email, all'indirizzo: "
                               
+            }
+
+
+## Questions Collection [/pagamento]
+
+### Question pagamento [POST]
+
+Puoi utilizzare questa richiesta per pagare i gettoni
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /pagamento
+
+    + Body
+
+            {
+                "titoloPaypal":"PAYPAL",
+                "titoloCartaDiCredito":"Carta di credito"
+                "titoloBonifico":"Acquisto di $ gettoni con Bonifico Bancario"
+                "nome":"Mario",
+                "cognome":"Rossi",
+                "email":"mariorossi@email.it",
+                "professione":"medico",
+                "codicefiscale_piva":"CODICEFISCALEQWERTY",
+                "indirizzo":"Viale Glorioso, 45 - 00153 Roma",
+                "gettonidisponibili":20,
+                "banca":"Intesa San Paolo"
+                "IBAN":"ibanibaniban"
+                "causale":"Ordine n"
+                "descrizione":"Riceverai i dettagli dell'ordine e gli estremi per il bonifico direttamente via email, all'indirizzo: email"
+
+            }
+
+## Questions Collection [/confermaPagamento]
+
+### Question conferma pagamento[POST]
+
+Puoi utilizzare questa richiesta per confermare il pagamento dei gettoni
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /confermaPagamento
+
+    + Body
+
+            {
+                "titoloConferma":"Conferma di acquisto di $ gettoni",
+                "sottotitolo":"Gentile X Y, ha acquistato i suoi gettoni virtuali"
+                "totaleOrdine":"$"
+                "numeroOrdine":"1232242L"
+                "nuovoSaldoGettoni":"$"
+                "descrizione":"Riceverai i dettagli dell'ordine e la fattura direttamente via email, all'indirizzo: "
+            }
+            
+            
+## Questions Collection [/corsiPrenotati]
+
+### Question corsi prenotati [POST]
+
+Puoi utilizzare questa richiesta per controllare i corsi prenotati
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /corsiPrenotati
+
+    + Body
+
+            {
+                "titolo":"Prossimi corsi prenotati"
+                "titoloCorso":"Corso specializzato polmoni",
+                "località":"Arezzo"
+                "Organizzatore":"ECM Toscana"
+                "data":"15 Settembre 2018"
+                "orario":"10/16"
+                "crediti":"Crediti ECM: n"
+            },
+             {
+                "titolo":"Prossimi corsi prenotati"
+                "titoloCorso":"Sutura chirurgica. Dalla teoria alla pratica",
+                "località":"Milano"
+                "Organizzatore":"Pegaso Formazione"
+                "data":"25 Settembre 2018"
+                "orario":"10/16"
+                "crediti":"Crediti ECM: n"
+            }
+            
+            
+## Questions Collection [/questionario]
+
+### Question questionario [POST]
+
+Puoi utilizzare questa richiesta per compilare il questionario
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /questionario
+
+    + Body
+
+            {
+                "titoloCorso":"Corso specializzato polmoni",
+                "località":"Arezzo"
+                "Organizzatore":"ECM Toscana"
+                "data":"15 Settembre 2018"
+                "orario":"10/16"
+                "crediti":"Crediti ECM: n"
+                "domanda1":"Quale dosaggio si consiglia per un caso di malessere? 0,25mg"
+                "domanda2":"Quale dosaggio si consiglia per un caso di malessere? 0,25mg"
+                "domanda3":"Quale dosaggio si consiglia per un caso di malessere? 0,25mg"
+                "domanda4":"Quale dosaggio si consiglia per un caso di malessere? 0,25mg"
+
+            }
+            
+## Questions Collection [/valutazioneQualità]
+
+### Question valutazioneQualità [POST]
+
+Puoi utilizzare questa richiesta per valutare la qualità del corso/docente
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /valutazioneQualità
+
+    + Body
+
+            {
+                "titolo":"Valutazione qualità",
+                "sottotitolo":"In questa schermata può valutare la qualità del corso frequentato."
+                "titoloPreparazioneDocente":"Preparazione del docente"
+            }
+            
+            
+## Questions Collection [/questionarioCompletato]
+
+### Question questionarioCompletato [POST]
+
+Puoi utilizzare questa richiesta per la vista del questionario completato
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /questionarioCompletato
+
+    + Body
+
+            {
+                "titolo":"Questionario completato",
+                "sottotitolo":"Gentili X Y, ha correttamente completato il questionario."
+                "titoloCorso":"Corso specializzato polmoni",
+                "località":"Arezzo"
+                "Organizzatore":"ECM Toscana"
+                "data":"15 Settembre 2018"
+                "orario":"10/16"
+                "crediti":"Crediti ECM: n"
+            }
+            
+
+## Questions Collection [/verificaQuestionario]
+
+### Question verificaQuestionario [POST]
+
+Puoi utilizzare questa richiesta per la verifica: i presenti in aula stanno compilando il questionario.
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /verificaQuestionario
+
+    + Body
+
+            {
+                "titolo":"Verifica in corso",
+                "sottotitolo":"I presenti in aula verificati stanno compilando il questionario."
+                "minutiRimanenti":"35 minuti rimanenti",
+                
+            }
+            
+## Questions Collection [/proceduraDiAccreditoPresentiInAula]
+
+### Question proceduraDiAccreditoPresentiInAula [POST]
+
+Puoi utilizzare questa richiesta per lanciare la procedura di accredito automatico dei presenti in aula.
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /proceduraDiAccreditoPresentiInAula
+
+    + Body
+
+            {
+                "titolo":"Procedura di accredito",
+                "sottotitolo":"Stai per lanciare la procedura di accredito automatico dei presenti in aula."
+                "dispositivoDiVerifica":"Dispositivo di verifica: BEACON_TOSCANA_01",
+                
             }
