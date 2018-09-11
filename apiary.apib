@@ -103,7 +103,7 @@ Puoi utilizzare questa richiesta per ottenere il dettaglio dei corsi!
 
 ## Questions Collection [/Profilo]
 
-### Question dettaglio corsi [POST]
+### Question dettaglio profilo [POST]
 
 Puoi utilizzare questa richiesta per ottenere i dati del profilo utente!
 
@@ -130,5 +130,37 @@ Puoi utilizzare questa richiesta per ottenere i dati del profilo utente!
                 "indirizzo":"Viale Glorioso, 45 - 00153 Roma",
                 "gettonidisponibili":20,
 
+                              
+            }
+            
+
+
+## Questions Collection [/confermaacquisto]
+
+### Question dettaglio corsi [POST]
+
+Puoi utilizzare questa richiesta per confermare l'acquisto dei gettoni
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /confermaacquisto
+
+    + Body
+
+            {
+                "stringa1":"Conferma di acquisto di X gettoni",
+                "stringa2":"Gentile X Y, ha acquistato correttamente i suoi gettoni virtuali."
+                "stringa3":"Totale ordine: "
+                "stringa4":"Numero ordine: "
+                "stringa5":"Nuovo saldo gettoni: "
+                "stringa6":"Riceverai i dettagli dell'ordine e la fattura direttamente via email, all'indirizzo: "
                               
             }
