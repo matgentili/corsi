@@ -75,11 +75,7 @@ Puoi utilizzare questa richiesta per ottenere il dettaglio dei corsi!
 + Request (application/json)
 
         {
-            "choices": [
-               1,
-               2,
-               3
-            ]
+            
         }
 
 + Response 200 (application/json)
@@ -91,37 +87,48 @@ Puoi utilizzare questa richiesta per ottenere il dettaglio dei corsi!
     + Body
 
             {
+                "id": 1,
+                "title": "Corso specializzato polmoni",
+                "description": "AAA",
+                "date": "15/09/2018",
+                "hour": "10/16",
+                "ecm": "ECM Toscana",
+                "city": "Arezzo",
+                "cost": "10",
+                "dettaglio":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+                              
+            
+            
 
-                "choices": [
-                              {
-                                "id": 1,
-                                "title": "Corso specializzato polmoni",
-                                "description": "AAA",
-                                "date": "15/09/2018",
-                                "hour": "10/16",
-                                "ecm": "ECM Toscana",
-                                "city": "Arezzo",
-                                "cost": "10"
-                              },
-                              {
-                                "id": 2,
-                                "title": "Corso specializzato cuore",
-                                "description": "BBB",
-                                "date": "13/10/2018",
-                                "hour": "9/15",
-                                "ecm": "ECM Toscana",
-                                "city": "Firenze",
-                                "cost": "12"
-                              },
-                              {
-                                "id": 3,
-                                "title": "Corso specializzato mani",
-                                "description": "CCC",
-                                "date": "03/11/2018",
-                                "hour": "12/17",
-                                "ecm": "ECM Toscana",
-                                "city": "Pisa",
-                                "cost": "15"
-                              }
-                            ]
+## Questions Collection [/Profilo]
+
+### Question dettaglio corsi [POST]
+
+Puoi utilizzare questa richiesta per ottenere i dati del profilo utente!
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /profilo
+
+    + Body
+
+            {
+                "nome":"Mario",
+                "cognome":"Rossi",
+                "email":"mariorossi@email.it",
+                "professione":"medico",
+                "codicefiscale/p.iva":"CODICEFISCALEQWERTY",
+                "indirizzo":"Viale Glorioso, 45 - 00153 Roma",
+                "gettonidisponibili":20,
+
+                              
             }
