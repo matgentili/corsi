@@ -5,7 +5,7 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Questions Collection [/corsi]
 
 ### Create a New Question [POST]
 
@@ -27,7 +27,70 @@ form of choices.
 
     + Headers
 
-            Location: /questions
+            Location: /corsi
+
+    + Body
+
+            {
+
+                "choices": [
+                              {
+                                "id": 1,
+                                "title": "Corso specializzato polmoni",
+                                "description": "AAA",
+                                "date": "15/09/2018",
+                                "hour": "10/16",
+                                "ecm": "ECM Toscana",
+                                "city": "Arezzo",
+                                "cost": "10"
+                              },
+                              {
+                                "id": 2,
+                                "title": "Corso specializzato cuore",
+                                "description": "BBB",
+                                "date": "13/10/2018",
+                                "hour": "9/15",
+                                "ecm": "ECM Toscana",
+                                "city": "Firenze",
+                                "cost": "12"
+                              },
+                              {
+                                "id": 3,
+                                "title": "Corso specializzato mani",
+                                "description": "CCC",
+                                "date": "03/11/2018",
+                                "hour": "12/17",
+                                "ecm": "ECM Toscana",
+                                "city": "Pisa",
+                                "cost": "15"
+                              }
+                              ]
+            }
+            
+
+## Questions Collection [/dettaglioCorsi]
+
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "choices": [
+               1,
+               2,
+               3
+            ]
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /dettaglioCorsi
 
     + Body
 
