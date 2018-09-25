@@ -800,7 +800,7 @@ Puoi utilizzare questa richiesta per la vista del questionario completato
 
             {
                 "titolo":"Questionario completato",
-                "sottotitolo":"Gentili X Y, ha correttamente completato il questionario.",
+                "sottotitolo":"Gentile X Y, ha correttamente completato il questionario.",
                 "titoloCorso":"Corso specializzato polmoni",
                 "località":"Arezzo",
                 "Organizzatore":"ECM Toscana",
@@ -835,6 +835,47 @@ Puoi utilizzare questa richiesta per la verifica: i presenti in aula stanno comp
                 "sottotitolo":"I presenti in aula verificati stanno compilando il questionario.",
                 "minutiRimanenti":"X minuti rimanenti"
                 
+            }
+            
+## Questions Collection [/recensioni]
+
+### Question recensioni [POST]
+
+Puoi utilizzare questa richiesta per ottenere le recensioni
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /verificaQuestionario
+
+    + Body
+            {
+                "listaRecensioni":[
+                                {
+                                "nome":"Mario",
+                                "cognome":"Rossi",
+                                "recensione":"Il corso è stato perfetto. Ottima organizzazione e preparazione del docente."
+                                },
+                                
+                                {
+                                "nome":"Luca",
+                                "cognome":"Gialli",
+                                "recensione":"Il corso è stato decente. Il docente avrebbe potuto prepararsi meglio sull'argomento."
+                                },
+                                
+                                {
+                                "nome":"Giorgio",
+                                "cognome":"Verdi",
+                                "recensione":"Il corso non mi è piaciuto. Ero gia a conoscenza della maggior parte delle nozioni."
+                                }
+                        ]
             }
             
 ## Questions Collection [/proceduraDiAccreditoPresentiInAula]
