@@ -706,6 +706,38 @@ Puoi utilizzare questa richiesta per controllare i corsi prenotati
                 }
             
             
+## Questions Collection [/profilo]
+
+### Question profilo [POST]
+
+Puoi utilizzare questa richiesta per ottenere il profilo
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /profilo
+
+    + Body
+
+            {
+                "nome":"Mario",
+                "cognome":"Rossi",
+                "email":"mariorossi@email.it",
+                "professione":"Medico",
+                "codicefiscale_piva":"CODICEFISCALEQWERTY",
+                "indirizzo":"Via trastevere, 44",
+                "gettonidisponibili":"20",
+                "aggiornamento":"11 Ottobre 2018",
+                
+
+            }
 ## Questions Collection [/questionario]
 
 ### Question questionario [POST]
