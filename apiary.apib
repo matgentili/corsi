@@ -738,6 +738,42 @@ Puoi utilizzare questa richiesta per ottenere il profilo
                 
 
             }
+            
+## Questions Collection [/professioni]
+
+### Question professioni [POST]
+
+Puoi utilizzare questa richiesta per ottenere le professioni
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /professioni
+
+    + Body
+    
+            {
+                "listaProfessioni":[
+                                    "Medico",
+                                    "Infermiere",
+                                    "Pizzaiolo",
+                                    "Meccanico",
+                                    "Carrozziere",
+                                    "Architetto",
+                                    "Insegnante",
+                                    "Sviluppatore",
+                                    "Cassiera",
+                                    "Tassista",
+                                    "Giardiniere"
+                        ]
+            }
 ## Questions Collection [/questionario]
 
 ### Question questionario [POST]
