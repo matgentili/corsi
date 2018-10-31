@@ -922,6 +922,33 @@ Puoi utilizzare questa richiesta per valutare la qualità del corso/docente
             }
             
             
+## Questions Collection [/numeroGettoniAcquistabili]
+
+### Question valutazione [POST]
+
+Puoi utilizzare questa richiesta per ricevere il numero di gettoni acquistabili
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /numeroGettoniAcquistabili
+
+    + Body
+
+            {
+                "100 GETTONI (145€)",
+                "150 GETTONI (210€)",
+                "200 GETTONI (250€)"
+                
+            }
+            
 ## Questions Collection [/questionarioCompletato]
 
 ### Question questionarioCompletato [POST]
