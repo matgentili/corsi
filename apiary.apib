@@ -638,43 +638,6 @@ Puoi utilizzare questa richiesta per iniziare l'acquisto dei gettoni
             }
 
 
-## Questions Collection [/pagamento]
-
-### Question pagamento [POST]
-
-Puoi utilizzare questa richiesta per pagare i gettoni
-
-+ Request (application/json)
-
-        {
-           
-        }
-
-+ Response 200 (application/json)
-
-    + Headers
-
-            Location: /pagamento
-
-    + Body
-
-            {
-                "titoloPaypal":"PAYPAL",
-                "titoloCartaDiCredito":"Carta di credito",
-                "titoloBonifico":"Acquisto di $ gettoni con Bonifico Bancario",
-                "nome":"Mario",
-                "cognome":"Rossi",
-                "email":"mariorossi@email.it",
-                "professione":"Medico",
-                "codicefiscale_piva":"CODICEFISCALEQWERTY",
-                "indirizzo":"Viale Glorioso, 45 - 00153 Roma",
-                "gettonidisponibili":20,
-                "banca":"Intesa San Paolo",
-                "IBAN":"ibanibaniban",
-                "causale":"Ordine n",
-                "descrizione":"Riceverai i dettagli dell'ordine e gli estremi per il bonifico direttamente via email, all'indirizzo: email"
-
-            }
 
 ## Questions Collection [/confermaPagamento]
 
@@ -895,6 +858,37 @@ Puoi utilizzare questa richiesta per compilare il questionario
 
             }
             
+            
+## Questions Collection [/rispostaBonificoBancario]
+
+### Question questionario [POST]
+
+Puoi utilizzare questa richiesta per ricevere la risposta per effettuare il bonifico
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /rispostaBonificoBancario
+
+    + Body
+
+            {
+                "sottotitolo":"Gentile nome cognome, per perfezionare l'acquisto, La invitiamo ad effettuare il bonifico alle seguenti coordinate.",
+                "numeroOrdine":"Numero ordine: 1232242L",
+                "banca":"Intesa San Paolo",
+                "iban":"IT12Y232312312312312312",
+                "causale":"Causale: Ordine 1232242L",
+                "crediti":"Riceverai i dettagli dell'ordine e gli estremi per il bonifico direttamente via email, all'indirizzo: "
+
+
+            }
 ## Questions Collection [/valutazione]
 
 ### Question valutazione [POST]
