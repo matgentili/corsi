@@ -667,6 +667,57 @@ Puoi utilizzare questa richiesta per ottenere l'elenco di tutti i corsi!
             }
 
 
+## Questions Collection [/login1]
+
+### Question login1 [POST]
+
+Puoi utilizzare questa richiesta per vedere se sei loggato -> TRUE
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /login1
+
+    + Body
+
+            {
+                "logged":"true",
+                              
+            }
+            
+
+## Questions Collection [/login2]
+
+### Question login1 [POST]
+
+Puoi utilizzare questa richiesta per vedere se sei loggato -> FALSE
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /login2
+
+    + Body
+
+            {
+                "logged":"false",
+                              
+            }
+
 ## Questions Collection [/acquistoGettoni]
 
 ### Question acquisto gettoni [POST]
