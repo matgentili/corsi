@@ -1276,7 +1276,7 @@ Puoi utilizzare questa richiesta per ottenere le recensioni
 
     + Headers
 
-            Location: /verificaQuestionario
+            Location: /recensioni
 
     + Body
     
@@ -1392,6 +1392,140 @@ Puoi utilizzare questa richiesta per ottenere le recensioni
                                 }
                         ]        
             }
+            
+
+## Questions Collection [/recensioni2]
+
+### Question recensioni [POST]
+
+Puoi utilizzare questa richiesta per ottenere le recensioni
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /recensioni2
+
+    + Body
+    
+            [
+                {
+                 "ecmID": 1,
+                 "listaRecensioni1":[
+                                {
+                                "nome":"Mario",
+                                "cognome":"Milano",
+                                "testo":"Il corso è stato perfetto. Ottima organizzazione e preparazione del docente."
+                                },
+                                
+                                {
+                                "nome":"Luca",
+                                "cognome":"Milano",
+                                "testo":"Il corso è stato decente. Il docente avrebbe potuto prepararsi meglio sull'argomento."
+                                },
+                                
+                                {
+                                "nome":"Giorgio",
+                                "cognome":"Milano",
+                                "testo":"Il corso non mi è piaciuto. Ero gia a conoscenza della maggior parte delle nozioni."
+                                }
+                        ]
+                },
+                {
+                  "ecmID": 2,
+                  "listaRecensioni2":[
+                                {
+                                "nome":"Mario",
+                                "cognome":"Roma",
+                                "testo":"Il corso è stato perfetto. Ottima organizzazione e preparazione del docente."
+                                },
+                                
+                                {
+                                "nome":"Luca",
+                                "cognome":"Roma",
+                                "testo":"Il corso è stato decente. Il docente avrebbe potuto prepararsi meglio sull'argomento."
+                                },
+                                
+                                {
+                                "nome":"Giorgio",
+                                "cognome":"Roma",
+                                "testo":"Il corso non mi è piaciuto. Ero gia a conoscenza della maggior parte delle nozioni."
+                                }
+                        ]
+                },
+                {
+                  "ecmID": 3,
+                  "listaRecensioni3":[
+                                {
+                                "nome":"Mario",
+                                "cognome":"Piemonte",
+                                "testo":"Il corso è stato perfetto. Ottima organizzazione e preparazione del docente."
+                                },
+                                
+                                {
+                                "nome":"Luca",
+                                "cognome":"Piemonte",
+                                "testo":"Il corso è stato decente. Il docente avrebbe potuto prepararsi meglio sull'argomento."
+                                },
+                                
+                                {
+                                "nome":"Giorgio",
+                                "cognome":"Piemonte",
+                                "testo":"Il corso non mi è piaciuto. Ero gia a conoscenza della maggior parte delle nozioni."
+                                }
+                        ]
+                },
+                {
+                  "ecmID": 4,
+                  "listaRecensioni4":[
+                                {
+                                "nome":"Mario",
+                                "cognome":"Marche",
+                                "testo":"Il corso è stato perfetto. Ottima organizzazione e preparazione del docente."
+                                },
+                                
+                                {
+                                "nome":"Luca",
+                                "cognome":"Marche",
+                                "testo":"Il corso è stato decente. Il docente avrebbe potuto prepararsi meglio sull'argomento."
+                                },
+                                
+                                {
+                                "nome":"Giorgio",
+                                "cognome":"Marche",
+                                "testo":"Il corso non mi è piaciuto. Ero gia a conoscenza della maggior parte delle nozioni."
+                                }
+                        ]
+                },
+                {
+                  "ecmID": 5,
+                  "listaRecensioni5":[
+                                {
+                                "nome":"Mario",
+                                "cognome":"Toscana",
+                                "testo":"Il corso è stato perfetto. Ottima organizzazione e preparazione del docente."
+                                },
+                                
+                                {
+                                "nome":"Luca",
+                                "cognome":"Toscana",
+                                "testo":"Il corso è stato decente. Il docente avrebbe potuto prepararsi meglio sull'argomento."
+                                },
+                                
+                                {
+                                "nome":"Giorgio",
+                                "cognome":"Verdi",
+                                "testo":"Il corso non mi è piaciuto. Ero gia a conoscenza della maggior parte delle nozioni."
+                                }
+                        ]    
+                }
+            ]
             
 ## Questions Collection [/proceduraDiAccreditoPresentiInAula]
 
