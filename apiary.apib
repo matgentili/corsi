@@ -1420,6 +1420,7 @@ Puoi utilizzare questa richiesta per ottenere le recensioni
                                 }
                         ]        
             }
+
             
 
 ## recensioni2 [/recensioni2]
@@ -1576,6 +1577,8 @@ Puoi utilizzare questa richiesta per ottenere le recensioni
                 }
             ]
             
+            
+            
 ## proceduraDiAccreditoPresentiInAula [/proceduraDiAccreditoPresentiInAula]
 
 ### Question proceduraDiAccreditoPresentiInAula [POST]
@@ -1600,4 +1603,29 @@ Puoi utilizzare questa richiesta per lanciare la procedura di accredito automati
                 "sottotitolo":"Stai per lanciare la procedura di accredito automatico dei presenti in aula.",
                 "dispositivoDiVerifica":"Dispositivo di verifica: BEACON_TOSCANA_01"
                 
+            }
+            
+            
+## GettoniDisponibili[/GettoniDisponibili]
+
+### Question GettoniDisponibili [GET]
+
+Puoi utilizzare questa richiesta per sapere quanti gettoni ho disponibili
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /GettoniDisponibili
+
+    + Body
+    
+            {
+                "gettoniDisponibili":20
             }
