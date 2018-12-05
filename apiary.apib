@@ -1196,6 +1196,36 @@ Puoi utilizzare questa richiesta per ricevere la risposta per effettuare il boni
 
 
             }
+            
+            
+## acquistoCompletato [/acquistoCompletato]
+
+### Question acquistoCompletato [POST]
+
+Puoi utilizzare questa richiesta per ricevere la risposta per acquistoCompletato
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /acquistoCompletato
+
+    + Body
+
+            {
+                "titolo":"Conferma di acquisto di $ gettoni",
+                "sottotitolo":"Gentile nome cognome, ha correttamente acquistato i suoi gettoni virtuali.",
+                "numeroOrdine":" 1232242L",
+                "dettagli":"Riceverai i dettagli dell'ordine e gli estremi per il bonifico direttamente via email, all'indirizzo: "
+
+            }
+            
 ## valutazione [/valutazione]
 
 ### Question valutazione [POST]
