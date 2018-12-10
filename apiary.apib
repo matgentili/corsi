@@ -1029,6 +1029,133 @@ Puoi utilizzare questa richiesta per controllare i corsi prenotati
                 }
             
             
+            
+## corsiPartecipati [/corsiPartecipati]
+
+### Question corsi partecipati [POST]
+
+Puoi utilizzare questa richiesta per controllare i corsi partecipati
+
++ Request (application/json)
+
+        {
+           
+        }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /corsiPartecipati
+
+    + Body
+
+            {
+                "listaCorsi":[
+                                {
+                                "id": 15,
+                                "idProvider":5,
+                                "title": "Corso specializzato schiena",
+                                "description": "CCC",
+                                "date": "10 Dicembre 2018",
+                                "hour": "12/17",
+                                "ecm": "ECM Toscana",
+                                "city": "Firenze",
+                                "cost": "10",
+                                "imgUrl":"https://i.imgur.com/eRmgqOj.png",
+                                "imgDettaglioUrl":"https://i.imgur.com/2o6Ml9I.png",
+                                "via":"Via Filippo Turati,5 AREZZO (AR)",
+                                "latitude":"43.479476",
+                                "longitude":"11.867780",
+                                "viaEcm":"Piazza del Colosseo, 1 Roma (RM)",
+                                "latitudeEcm":"41.890493",
+                                "longitudeEcm":"12.492332",
+                                "localitaEcm":"Roma",
+                                "email":"info@ecmtoscana.it",
+                                "attivo":"true",
+                                "professione":"Medico",
+                                "dettaglio":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                "dettaglioEcm":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                },
+                                {
+                                "id": 16,
+                                "idProvider":1,
+                                "title": "Corso specializzato dentisti",
+                                "description": "CCC",
+                                "date": "3 Dicembre 2018",
+                                "hour": "12/17",
+                                "ecm": "ECM Lombardia",
+                                "city": "Milano",
+                                "cost": "12",
+                                "imgUrl":"https://i.imgur.com/eRmgqOj.png",
+                                "imgDettaglioUrl":"https://i.imgur.com/2o6Ml9I.png",
+                                "via":"Via Filippo Turati,5 Milano (MI)",
+                                "latitude":"45.474171",
+                                "longitude":"9.194931",
+                                "viaEcm":"Piazza del Colosseo, 1 Roma (RM)",
+                                "latitudeEcm":"41.890493",
+                                "longitudeEcm":"12.492332",
+                                "localitaEcm":"Roma",
+                                "email":"info@ecmtoscana.it",
+                                "attivo":"true",
+                                "professione":"Medico",
+                                "dettaglio":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                "dettaglioEcm":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                },
+                                {
+                                "id": 25,
+                                "idProvider":3,
+                                "title": "Corso specializzato occhi",
+                                "description": "CCC",
+                                "date": "22 Novembre 2018",
+                                "hour": "12/17",
+                                "ecm": "ECM Piemonte",
+                                "city": "Asti",
+                                "cost": "8",
+                                "imgUrl":"https://i.imgur.com/5xc84r7.png",
+                                "imgDettaglioUrl":"https://i.imgur.com/2o6Ml9I.png",
+                                "via":"Via Filippo Turati,5 ASTI (AT)",
+                                "latitude":"44.908340", 
+                                "longitude":"8.186383",
+                                "viaEcm":"Piazza del Colosseo, 1 Roma (RM)",
+                                "latitudeEcm":"41.890493",
+                                "longitudeEcm":"12.492332",
+                                "localitaEcm":"Roma",
+                                "email":"info@ecmpiemonte.it",
+                                "attivo":"true",
+                                "professione":"Giardiniere",
+                                "dettaglio":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                "dettaglioEcm":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                              },
+                                {
+                                "id": 29,
+                                "idProvider":5,
+                                "title": "Corso specializzato cuore",
+                                "description": "CCC",
+                                "date": "28 Settembre 2018",
+                                "hour": "12/17",
+                                "ecm": "ECM Toscana",
+                                "city": "Firenze",
+                                "cost": "15",
+                                "imgUrl":"https://i.imgur.com/eRmgqOj.png",
+                                "imgDettaglioUrl":"https://i.imgur.com/2o6Ml9I.png",
+                                "via":"Via Filippo Turati,5 AREZZO (AR)",
+                                "latitude":"43.479476",
+                                "longitude":"11.867780",
+                                "viaEcm":"Piazza del Colosseo, 1 Roma (RM)",
+                                "latitudeEcm":"41.890493",
+                                "longitudeEcm":"12.492332",
+                                "localitaEcm":"Roma",
+                                "email":"info@ecmtoscana.it",
+                                "attivo":"true",
+                                "professione":"Medico",
+                                "dettaglio":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                "dettaglioEcm":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            }
+                        ]
+                }
+            
+            
 ## profilo [/profilo]
 
 ### Question profilo [POST]
